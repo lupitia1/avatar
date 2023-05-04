@@ -1,26 +1,85 @@
 .Upload-Canva {
-    margin-top: 40px;
-    width: 40vmin;
-    height: 50vmin;
-    background-color: rgba(5, 18, 45, 0.388);
-    box-shadow: 5px 5px 10px 1px rgba(84, 84, 84, 0.83);
+  margin-top: 40px;
+  width: 40vmin;
+  height: 50vmin;
+  background-color: rgba(5, 18, 45, 0.388);
+  box-shadow: 5px 5px 10px 1px rgba(84, 84, 84, 0.83);
 }
 
 .photo {
-    margin-top: auto;
-    padding: 5px;
-    background-color: rgba(56, 132, 255, 0.435);
-    align-self: center;
-    height: 20vmin;
-    width: 30vmin;
-    pointer-events: none;
-    box-shadow: 5px 5px 10px 1px rgba(84, 84, 84, 0.715);
-    border-radius: 15px
-  }
+  margin-top: auto;
+  padding: 5px;
+  background-color: rgba(56, 132, 255, 0.435);
+  align-self: center;
+  height: 20vmin;
+  width: 30vmin;
+  pointer-events: none;
+  box-shadow: 5px 5px 10px 1px rgba(84, 84, 84, 0.715);
+  border-radius: 15px
+}
 
-  .photo-header {
-    font-size: 20px;
-    margin-top: auto;
-    margin-bottom: -40px;
-  }
+.photo-header {
+  font-size: 20px;
+  margin-top: auto;
+  margin-bottom: -40px;
+}
+
+.button {
+
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  padding: 0 56px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 7px;
+  background-color: #0070f3;
+  color: white;
+  font-weight: 900;
+  font-size: 16px;
+  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+  transition: 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.button{
+    
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  padding: 0 56px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 7px;
+  background-color: #0070f3;
+  color: white;
+  font-weight: 900;
+  font-size: 16px;
+  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+  transition: 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
   
+  
+}
+
+button:hover{
+  background: rgba(0, 183, 255, 0.9);
+  box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+}
+
+.Upload-Button {
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Upload-Button:hover {
+  background-color: #5227eb; /* Green */
+  color: white;
+}
+
+.spinner {
+  margin: auto;
+  width: 80px;
+  height: 80px;
+}

@@ -9,6 +9,8 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 const newDiv = document.createElement("div");
 newDiv.appendChild(renderer.domElement);
 
+scene.background = new THREE.Color( 0x339cf1 );
+
 // const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 // const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 // const cube = new THREE.Mesh( geometry, material );
@@ -20,8 +22,11 @@ camera.position.z = 5;
 const loader = new GLTFLoader();
 
 loader.load('3dmodels/wsmith.glb', function (gltf) {
+    const model = gltf.scene
+    model.position.set( 0, 0, 0 );
+    model.scale.set( 2, 2, 2 );
 
-    scene.add(gltf.scene);
+    scene.add(model);
 
 }, undefined, function (error) {
 
@@ -38,7 +43,7 @@ animate()
 
 function RenderedAvatar() {
     return (
-        <div style={{}} ref={(nodeElement) => { nodeElement && nodeElement.appendChild(newDiv) }} />
+        <div ref={(nodeElement) => { nodeElement && nodeElement.appendChild(newDiv) }} />
     )
 }
 
