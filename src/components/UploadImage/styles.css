@@ -1,0 +1,26 @@
+.Upload-Canva {
+    margin-top: 40px;
+    width: 40vmin;
+    height: 50vmin;
+    background-color: rgba(5, 18, 45, 0.388);
+    box-shadow: 5px 5px 10px 1px rgba(84, 84, 84, 0.83);
+}
+
+.photo {
+    margin-top: auto;
+    padding: 5px;
+    background-color: rgba(56, 132, 255, 0.435);
+    align-self: center;
+    height: 20vmin;
+    width: 30vmin;
+    pointer-events: none;
+    box-shadow: 5px 5px 10px 1px rgba(84, 84, 84, 0.715);
+    border-radius: 15px
+  }
+
+  .photo-header {
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: -40px;
+  }
+  
