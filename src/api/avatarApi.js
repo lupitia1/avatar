@@ -13,12 +13,8 @@
 import { apiClient } from './base';
 
 const apiMethods = {
-    getAvatar: (params) => apiClient.get('/avatar', { params })
-    //,
-    // getStopsNoPagination: () =>
-    //   apiClient.get<ResponseInRows<IStops>>('/stop_codes/noPagination'),
-    // getStop: (id: number) => apiClient.get<IStops>(`stop_codes/one/${id}`),
-    // createStop: (body: IStopsPayload) => apiClient.post('stop_codes', body),
+    // getAvatar: (params) => apiClient.get('/avatar', { params }),
+    createAvatar: (body) => apiClient.post('/avatars', body),
     // uploadStops: (csv: FormData) =>
     //   apiClient.post<ResponseInData<number>>('files/uploadFile', csv),
     // updateStop: (id: number | undefined, body: IStopsPayload) =>

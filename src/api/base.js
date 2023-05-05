@@ -4,7 +4,7 @@ import config from './config';
 
 const headers = {
   Accept: "'application/json', 'multipart/form-data'",
-  'Content-Type': 'application/json'
+  'Content-Type': 'application/json',
 };
 
 const default_config = (url) => ({
@@ -12,7 +12,7 @@ const default_config = (url) => ({
   headers
 });
 
-const timeout = 5000;
+const timeout = 50000; //Modificar en caso de ser necesario
 
 class ClientAPI {
   client;
@@ -23,11 +23,10 @@ class ClientAPI {
   constructor(name, baseURL) {
     if (!baseURL) {
       // eslint-disable-next-line
-      // throw `${name} baseURL can't be undefined`;
+      throw `${name} baseURL can't be undefined`;
     }
 
     this.baseURL = baseURL;
-    this.token = '';
     this.client = axios.create({
       ...default_config(baseURL),
       timeout,
@@ -139,23 +138,22 @@ class ClientAPI {
     return this.makeRequest('GET', url, config);
   }
 
-  // async post(url, data, config) {
-  //   return this.makeRequest(Methods.POST, url, data, config);
-  // }
+  async post(url, data, config) {
+    return this.makeRequest('POST', url, data, config);
+  }
 
   // async put(url, data, config) {
-  //   return this.makeRequest(Methods.PUT, url, data, config);
+  //   return this.makeRequest(PUT, url, data, config);
   // }
 
   // async patch(url, data, config) {
-  //   return this.makeRequest(Methods.PATCH, url, data, config);
+  //   return this.makeRequest(PATCH, url, data, config);
   // }
 
   // async delete(url, data, config) {
-  //   return this.makeRequest(Methods.DELETE, url, data, config);
+  //   return this.makeRequest(DELETE, url, data, config);
   // }
 }
-console.log(config);
 const apiClient = new ClientAPI('API_CLIENT', config.API_URL);
-
+apiClient.setToken(config.API_TOKEN)
 export { apiClient };
